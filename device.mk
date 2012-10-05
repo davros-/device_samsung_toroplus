@@ -1,4 +1,4 @@
-# Copyright (C) 2012 The Android Open Source Project
+# Copyright (C) 2011 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,16 @@
 #
 # Everything in this directory will become public
 
-DEVICE_PACKAGE_OVERLAYS := device/samsung/toroplus/overlay
-
+# use toro device as base so in upgrades we will upgrade both at once
 $(call inherit-product, device/samsung/tuna/device.mk)
+
+# APNs for 3G network access
+PRODUCT_COPY_FILES += \
+    device/samsung/toroplus/plus-apns-conf.xml:system/etc/apns-conf.xml
+
+# Overlay for WiMAX-related settings
+DEVICE_PACKAGE_OVERLAYS += device/samsung/toroplus/toroplus_overlay \
+                           device/samsung/toroplus/overlay
+
+# Add Toro spring specific device configuration
 $(call inherit-product-if-exists, vendor/samsung/toroplus/device-vendor.mk)
