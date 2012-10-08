@@ -47,13 +47,4 @@ PRODUCT_NAME := full_toroplus
 PRODUCT_DEVICE := toroplus
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := Galaxy Nexus
-BUILD_ID := IMM76D
-BUILD_DISPLAY := IMM76D.L700FC12
-BUILD_VERSION_INCREMENTAL := L700FC12
-PRODUCT_MANUFACTURER := samsung
-BUILD_DESCRIPTION := mysidspr-user 4.0.4 IMM76I 330937 release-keys
-BUILD_FINGERPRINT := samsung/mysidspr/toroplus:4.0.4/IMM76I/330937:user/release-keys
-
-
-
 
